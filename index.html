@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>あなたのいいところ診断</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>あなたのいいところは？</h1>
+  <p>診断したい名前を入れてください</p>
+  <div class="mainContainer sectionBox">
+    <form class="formBox" id="assessmentForm">
+        <input type="text" id="userName" maxlength="20">
+        <button type="submit">診断！</button>
+    </form>
+  </div>
+  <div id="resultContainer" class="sectionBox" style="display: none;"></div>
+  <script src="assessment.js"></script>
+</body>
+</html>
