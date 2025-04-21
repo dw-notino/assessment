@@ -38,11 +38,18 @@ document.getElementById("assessmentForm").addEventListener("submit", e => {
   
   const elmCaption = document.createElement("h3");
   elmCaption.textContent = "結果発表";
+  elmCaption.classList.add("card-header");
+  elmCaption.classList.add("text-bg-primary");
   elmResultContainer.appendChild(elmCaption);
 
-  const elmBody = document.createElement("p");
-  elmBody.textContent = result;
+  const elmBody = document.createElement("div");
+  elmBody.classList.add("card-body");
   elmResultContainer.appendChild(elmBody);
+
+  const elmText = document.createElement("p");
+  elmText.textContent = result;
+  elmText.classList.add("card-text");
+  elmBody.appendChild(elmText);
   
   // ツイートボタン
   const shareLinkHtml = 
@@ -55,7 +62,7 @@ document.getElementById("assessmentForm").addEventListener("submit", e => {
   const elmDummy = document.createElement("div");
   elmDummy.innerHTML = shareLinkHtml;
   elmDummy.getElementsByTagName("a")[0].setAttribute("data-text", result);
-  elmResultContainer.appendChild(elmDummy);
+  elmText.appendChild(elmDummy);
 
   elmResultContainer.style.display = "block";
 });
